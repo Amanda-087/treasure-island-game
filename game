@@ -1,0 +1,67 @@
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+
+#https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
+
+#Write your code below this line 👇
+while True:
+  print(
+      "\n You have arrived at a split road. To the left is a forest, and to the right is a beach. Which direction will you go?"
+  )
+  road = input("Type 'left' or 'right' and press enter. ")
+  if road == "left":
+    print("\n You fell into a hole. Game Over. Try again!\n")
+    continue
+  elif road == "right":
+    print(
+        "\n You are at the beach and see an island that looks interesting. Will you swim to it or wait for a boat?"
+    )
+  else:
+    print("\n You have entered an invalid input. Please try again.\n")
+
+  island = input("Type 'wait' to wait for a boat, or 'swim' to swim across. ")
+  if island == "swim":
+    print("\n You were attacked by an octopus! Game Over. Try again!\n")
+    continue
+  elif island == "wait":
+    print(
+        "\n You have arrived at the island and see 3 trees, each with a different colored door, green, blue, and purple. Choose a door to inspect."
+    )
+
+  door = input("Type 'green', 'blue', or 'purple' to choose a door. ")
+  if door == "green":
+    print("\n You were eaten by a dinosaur! Game Over. Try again!\n")
+    continue
+  elif door == "purple":
+    print(
+        "\n You were sprinkled with fairy dust and floated away! Game Over. Try again!\n"
+    )
+    continue
+  elif door == "blue":
+    print("\n You found the treasure! You win!")
+    break
+  else:
+    print("\n You have entered an invalid input. Please try again.\n")
+    continue
